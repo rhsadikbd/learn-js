@@ -1,4 +1,15 @@
-<script setup></script>
+<script setup>
+const props = defineProps({
+  tasks: Array,
+  pendingCount: Number
+})
+
+const emit = defineEmits(['clear-all', 'delete-task'])
+
+const deleteTask = (id) => {
+  emit('delete-task', id)
+}
+</script>
 
 <template>
   <div class="container">
@@ -15,24 +26,20 @@
       <!-- task lists -->
       <div class="taskItems">
         <ul>
-          <li>
-            <button>Learn Vue JS</button>
-            <button><i class="far fa-trash-alt"></i></button>
-          </li>
-          <li>
-            <button>Watch netflix</button>
-            <button><i class="far fa-trash-alt"></i></button>
+          <li v-for="task in tasks" :key="task.id">
+            <button>{{ task.title }}</button>
+            <button @click="deleteTask(task.id)"><i class="far fa-trash-alt"></i></button>
           </li>
         </ul>
       </div>
       <!-- buttons -->
       <div class="clearBtns">
         <button>Clear completed</button>
-        <button>Clear all</button>
+        <button @click="$emit('clear-all')">Clear all</button>
       </div>
       <!-- pending task -->
       <div class="pendingTasks">
-        <span>Pending Tasks: </span>
+        <span>Pending Tasks: {{ pendingCount }}</span>
       </div>
     </div>
   </div>

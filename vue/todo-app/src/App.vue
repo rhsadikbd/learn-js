@@ -1,7 +1,7 @@
 <script setup>
-import { ref } from "vue";
-import TaskCom from "./components/TaskCom.vue";
-const tasksArray = ref([
+import { computed, ref } from "vue";
+import Task from "./components/Task.vue";
+const tasks = ref([
   {
     id: 1,
     title: "Learn Vue JS",
@@ -28,11 +28,19 @@ const tasksArray = ref([
     completed: false,
   },
 ]);
+
+const deleteTask = (id) => {
+  tasks.value = tasks.value.filter(task => task.id !== id)
+}
+
+const pendingCount = computed(() =>
+  tasks.value.filter(task => !task.completed).length
+)
 </script>
 
 <template>
   <div id="app">
-    <TaskCom />
+    <Task :tasks="tasks" :pending-count="pendingCount" @clear-all="tasks = []" @delete-task="deleteTask"/>
   </div>
 </template>
 
