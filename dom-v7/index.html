@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animation</title>
+  <style>
+    /* Basic Button Styling */
+    button {
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      background-color: #6200ee;
+      color: white;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+
+      /* Goal 1: Add a box shadow */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Goal 2: The Animation Class */
+    .active-btn {
+      animation: pulse 0.6s infinite alternate;
+      background-color: #3700b3;
+      box-shadow: 0 0 15px rgba(98, 0, 238, 0.7);
+    }
+
+    @keyframes pulse {
+      from {
+        transform: scale(1);
+      }
+
+      to {
+        transform: scale(1.05);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="display">Display</h1>
+  <button>Button 1</button>
+  <button>Button 2</button>
+  <button>Button 3</button>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
