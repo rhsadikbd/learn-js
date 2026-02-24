@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2 class="title">Budget Tracker App</h2>
+    <div class="input-item">
+      <label for="">User Name</label>
+      <input type="text" placeholder="Enter" id="userName" />
+    </div>
+    <div class="input-item">
+      <label for="">Total Income</label>
+      <input type="number" placeholder="Enter" id="totalIncome" />
+    </div>
+    <div class="input-item">
+      <label for="">No of Expenses</label>
+      <input type="number" id="noOfExpenses" placeholder="Enter" />
+    </div>
+    <div class="input-item">
+      <button id="start_budgeting">Start Budgeting</button>
+    </div>
+    <div class="expensesSection"></div>
+    <button id="calculateBudget">Calculate Budget</button>
+    <button id="clearBudget">Clear Budget</button>
+    <script src="script.js"></script>
+  </body>
+</html>

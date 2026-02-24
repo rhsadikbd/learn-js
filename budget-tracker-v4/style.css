@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+.title {
+  margin-bottom: 30px;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: underline;
+}
+label {
+  display: block;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:active {
+  background-color: #0056b3;
+}
+
+.expensesSection {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+}
+#calculateBudget {
+  margin: 5px 0;
+  display: none;
+}
+#clearBudget {
+  background-color: #dc3545;
+  display: none;
+}
