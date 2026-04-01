@@ -1,18 +1,23 @@
 <!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DOM</title>
-</head>
+	<body>
+		<button onclick="prev()">Previous</button>
+		<img src="1.jpg" alt="" style="width: 300px" />
+		<button onclick="next()">Next</button>
 
-<body>
-  <button onclick="prev()">Previous</button>
-  <img src="1.jpg" alt="" style="width: 300px;">
-  <button onclick="next()">Next</button>
+		<button
+			className="prettier-class"
+			id="prettier-id"
+			onClick="{this.handleClick}">
+			Click Here
+		</button>
 
-  <script src="./app.js"></script>
-</body>
-
+		<script src="./app.js"></script>
+	</body>
 </html>
